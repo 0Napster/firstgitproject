@@ -3,21 +3,7 @@ var plugins = require("gulp-load-plugins")();
 var runSequence = require("run-sequence");
 
 var jsConcatFiles = [
-    'js/cookie.js',
-    'js/tools.js',
-    'js/crazyEgg.js',
-    'js/nicePopup.js',
-    'js/lang/popupLanguage.js',
-    'js/popup.js',
-    'js/animations.js',
-    'js/browser.js',
-    'js/triggerPopup.js',
-    'js/tree.js',
-    'js/menu.js',
-    'js/footer.js',
-    'js/googleSlide.js',
-    'js/toggle.js',
-    'js/index.js'
+    
 ];
 
 gulp.task("scripts:dev", function () {
