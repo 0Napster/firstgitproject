@@ -1,0 +1,214 @@
+body.ie {
+    min-width:1100px !important;
+}
+.ie {
+    .container {
+        min-width: 980px !important;
+    }
+    #wrapper .visual-container {
+        background:none;
+        min-height:0;
+        height:auto;
+        img {
+            width:100%;
+            height:auto;
+            position:static;
+            display:block;
+        }
+    }
+    // Popups
+    .popup-header {
+        background-color: $pure_black;
+    }
+    &.ie8, &.ie9 {
+        #header .top-block .container nav .button-lang-container.english {
+            width: 255px;
+        }
+        .animation {
+            left: 0 !important;
+            opacity: 1 !important;
+        }
+        .popupOverlay {
+            background-color: $pure_black;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; /* IE 8 & 9 */
+        }
+        // Experts metier
+        .transparent.container {
+            background: url(/images/carretransparent.png);
+            height: 100%;
+            width: 100%;
+        }
+        // Index
+        .our-offer {
+            ul li { width: 30%;}
+            .thatisthekey {
+                background-image: url("/images/index/keyBgImageIE.png") !important;
+                span {display: none !important;}
+            }
+            .ruller-container {
+                .thatistheruller {
+                    background-image: url("/images/index/rullerIE.png") !important;
+                }
+                .ruller {
+                    display: none !important;
+                }
+            }
+            .timer {
+                background-image: url("/images/index/timerIE.png") !important;
+                span {
+                    &.minutes, &.hours {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+        // page ressources
+
+        .other-ressources .container .resources-list li a:hover .text-container {
+            background-color: $pure_black;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+        }
+        // Section Webinar
+        .webinar {
+            position: relative; /* Pour que le filter AlphaImageLoader marche */
+            min-width: 980px !important;
+            .bottom-banner {
+                min-width: 980px !important;
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#59000000, endColorstr=#59000000);
+            }
+        }
+        // Submenu
+        #header .top-block .container nav .left-links-container .submenu .colons ul.first-colon {
+            background: url(/images/global/menu/transparent.png);
+        }
+        #header .top-block .container nav .left-links-container .submenu .colons ul.second-colon {
+            background: url(/images/global/menu/transparent.png);
+        }
+    }
+    &.ie8 {
+        // footer
+        #footer {
+          display:block;
+        }
+        #footer .footer-info .row .convexity .convexity-inner .image-container .img-hover {
+            display: none;
+        }
+        #footer .footer-info .row .convexity .convexity-inner:hover .texts {
+            color: #CCC;
+        }
+
+        .big-store .container-big-store .container-right .button360-store:hover{
+            color:#FFF;
+            border: 1px solid #FFFFFF;
+        }
+        // Popup
+        .popup-container {
+            .main-title,.description,.subtitle {
+                background-color: $pure_white;
+            }
+        }
+        // Page qui sommes nous
+
+        .our-team .member-list li .hidden-infos {
+            background: url(/images/transparent-background.png);
+            height: 175px;
+            width: 175px;
+            .infos {
+                top: 110px !important;
+                left: 0 !important;
+                width: 175px !important;
+                font-size: 0.8em !important;
+                display: inline-block !important;
+                text-align: center !important;
+                .social {
+                    display: none !important;
+                }
+            }
+        }
+        .our-answers .hover-detect .hidden-infos {
+            display: none !important;
+        }
+
+        //  Section Ressource
+        .get-whitePaper #global-table {
+            width: 962px;
+        }
+        .get-whitePaper #upright-table, .get-whitePaper #downright-table, .get-whitePaper #dowright-undertable {
+            width: 420px;
+        }
+        .get-whitePaper #undertable {
+            width: 962px;
+        }
+        .get-whitePaper .container .fullResolution table .cell .hoverContainer .hover-detect .textshowOnhover .text-description {
+            padding: 0 10px;
+        }
+        .get-whitePaper .container .fullResolution table .cell .hoverContainer .text-description {
+            display: none !important;
+        }
+        .get-whitePaper .container .fullResolution table .cell .hoverContainer:hover .text-description {
+            display: table-cell !important;
+            border: 0 !important;
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#75000000, endColorstr=#75000000);
+        }
+        .get-whitePaper .container .fullResolution.other-lang #global-table,  .get-whitePaper .container .fullResolution.other-lang #undertable {
+            width: 452px;
+        }
+
+        // webinar
+        .webinar, .webinar-subscription {
+            input[type=checkbox].css-checkbox {
+                position:relative !important;
+                z-index:1 !important;
+                left: 0 !important;
+            }
+            .title {
+                font-size: 1em !important;
+            }
+            label.css-label {
+                background-image: none !important;
+                padding: 0 !important;
+            }
+            label .long {
+                display: none !important;
+            }
+        }
+        // devis
+
+        .your-devis .container .transitions .transition.transition3 .choices .choice input[type=checkbox].css-checkbox  {
+            position:relative !important;
+            z-index:1 !important;
+            left: 0 !important;
+        }
+        .your-devis .container .transitions .transition.transition3 .choices .choice label.css-label {
+            background-image: none !important;
+            padding: 0 !important;
+        }
+
+
+        // tableau comparatif
+
+        .begin .animSide {
+            .background-cover .background-hover {
+                display: none !important;
+            }
+            .text {
+                right: 0 !important;
+            }
+        }
+    }
+    &.ie9 {
+        .member-list li .hidden-infos {
+            background: url(/images/transparent-background.png);
+            height: 175px;
+            width: 175px;
+        }
+    }
+    &.ie10 {
+        .member-list li .hidden-infos {
+            background: url(/images/transparent-background.png);
+            height: 175px;
+            width: 175px;
+        }
+    }
+}

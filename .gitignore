@@ -4,6 +4,4 @@ config.php
 .sass-cache
 node_modules
 package.json
-/test
-leads/uploads/
 .idea/

@@ -1,0 +1,447 @@
+// Style globaux pour les popup
+
+.popup-contact, .popup-freetrial, .popup-joinus {
+    cursor: pointer;
+}
+
+.popupOverlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+}
+
+.nicePopup {
+    left:50%;
+    position: absolute;
+    z-index: 100;
+    .popup-header {
+        background: rgba(0, 0, 0, 0.8);
+        border-bottom: 1px solid #E9E9E9;
+        padding: 25px 0 20px;
+        text-align: center;
+        @include border-radius(7px);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .popup-body {
+        background-color: $pure_white;
+        border: 0;
+        padding: 0 30px 30px 30px;
+        font-size: 13px;
+        @include border-radius(7px);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        .popup-title {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            padding: 25px 0 15px 0;
+        }
+        .joinUS {
+            margin: 10px 0px 30px 0;
+            .confirmationExperiences {
+                margin: 8px 0px;
+                .confirmationExperience {
+                    input {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .button360 {
+            display: block;
+            height: 45px;
+            line-height: 45px;
+            position: relative;
+            margin-top: 10px;
+            font-size: 1.4em;
+            text-align: center;
+            @media only screen and (max-width: 979px) {
+                font-size: 1.2em;
+            }
+            @media only screen and (max-width: 480px) {
+                font-size: 1em;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        .popup-input {
+            background-color: $pure_white;
+            border: 1px solid #DDD;
+            font-weight: normal;
+            padding: 5px;
+            position: relative;
+            z-index: 0;
+            margin-top: 10px;
+            font-size: 16px;
+            @media only screen and (max-width: 480px) {
+                font-size: 14px;
+            }
+            &:first-child  {
+                margin-top:0;
+            }
+            input {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                padding-left: 2px;
+                width: 100%;
+            }
+            &.large {
+                min-height: 88px;
+                textarea {
+                    /* Hide any scrollbars */
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    resize: none;
+                    @include box-sizing(border-box);
+                    background: transparent;
+                    border: 0;
+                    margin: 0;
+                    outline: 0;
+                    padding: 5px;
+                    /* Make the text soft-wrap */
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                }
+            }
+            .warningMsg {
+                position: absolute;
+                top: 7px;
+                right: 12px;
+                color: #F7891C;
+                @media only screen and (max-width: 767px) {
+                    top: 10px;
+                }
+            }
+        }
+        .conditions {
+            margin: 10px 0;
+            label {
+                margin-left: 3px;
+            }
+            a {
+                color: $pure_black;
+            }
+        }
+        .popup-label {
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            padding: 25px 0 15px 0;
+            &.conditions{
+                padding: 5px 0 15px 0;
+            }
+        }
+    }
+}
+
+// New Popup
+
+
+#dark_screen {
+    background-color: black;
+    opacity:1;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 100;
+    margin:0;
+    padding:0;
+}
+
+.no-touch .popup-container ul li a:hover, .touch .popup-container ul li a:active {
+    cursor: pointer;
+    background-color: $orange_button;
+    color: $pure_white;
+    @include transition(0.3s);
+}
+
+.popup-container {
+    overflow: hidden;
+    background-color: $pure_white;
+    @include border-radius(5px);
+    @include font-smoothing(antialiased);
+    height:440px; /* default */
+    display: block;
+    top:50%; /* default */
+    left:50%;
+    z-index:1000;
+    visibility:hidden;
+    width: 614px;
+    margin-left: -307px;
+    position: fixed;
+    @media only screen and (max-width: 767px) {
+        width: 80%;
+        margin-left: -40%;
+        position: absolute;
+    }
+    h1  {
+        color: #384047;
+        margin:0;
+        line-height:1.2em;
+        font-weight:800;
+    }
+    h2 {
+        color: $orange_button;
+        margin:0;
+        line-height:1em;
+        font-weight:800;
+        span {
+            display: block;
+            font-weight: 800;
+            @media only screen and (max-width: 979px) {
+                display: inline;
+            }
+        }
+    }
+    h3 {
+        color: #7E8D9F;
+        margin:0;
+        line-height:1.4em;
+        font-size: 0.8em;
+        font-weight: 600;
+        span {
+            font-weight: 600;
+            display: block;
+            @media only screen and (max-width: 979px) {
+                display: inline;
+            }
+            @media only screen and (max-width: 767px) {
+                display: block;
+            }
+            @media only screen and (max-width: 480px) {
+                display: inline;
+            }
+        }
+        a {
+            color: #7E8D9F;
+            line-height:1.4em;
+            font-weight: 600;
+        }
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            width: 100%;
+            a {
+                font-weight: 600;
+                color: #7E8D9F;
+                background-color: #E8EBED;
+                text-decoration: none;
+                display: block;
+                @include border-radius(5px);
+                font-size: 0.7em;
+                padding: 11px 11px 11px 16px;
+                @media only screen and (max-width: 767px) {
+                    font-size: 1em !important;
+                    padding: 8px;
+                }
+            }
+            span {
+                font-weight: 600;
+            }
+        }
+        li + li {
+            margin-top: 11px;
+            @media only screen and (max-width: 480px) {
+                margin-top: 8px;
+            }
+        }
+        &.inlineList li {
+            display: inline-block;
+            width: 31%;
+            margin: 0;
+            a {
+                font-size: 0.65em;
+                padding: 11px 0;
+                text-align: center;
+            }
+            &:first-child + li {
+                margin: 0 3.5%;
+            }
+        }
+    }
+    .button360 {
+        padding: 16px 31px 16px 16px;
+        position:relative;
+        font-size: 0.8em;
+        line-height:13px;
+        display: block;
+        margin: 26px auto 5px auto;
+        font-weight: 600;
+        width: 54.5%;
+        @media only screen and (max-width: 979px) {
+            width: 45.5%;
+        }
+        @media only screen and (max-width: 480px) {
+            width: 70.5%;
+        }
+    }
+    .cross-close {
+        z-index: 1000;
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        @media only screen and (max-width: 480px) {
+            right: 20px;
+            top: 20px;
+        }
+        a {
+            margin: 0;
+            padding: 6px;
+            border: 0;
+            line-height: 0;
+            display: block;
+            background-color: #B7C0C7;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        &:hover a{
+            background-color: #EF5956;
+            cursor: pointer;
+        }
+    }
+    .inner-popup {
+        position: absolute;
+        left:100%;
+        width: 100%;
+        .inner-container {
+            padding: 32px;
+            @media only screen and (max-width: 480px) {
+                padding: 20px;
+            }
+            .other-content,.main-title,.description,.subtitle{
+                display: none;
+            }
+            .other-content {
+                margin-bottom: 28px;
+                @media only screen and (max-width: 480px) {
+                    margin-bottom: 17px;
+                }
+                .popup-input-newPopup {
+                    font-size: 0.7em;
+                    margin-top: 16px;
+                    z-index: 0;
+                    background-color: #e8ebed;
+                    border: 1px solid #e8ebed;
+                    border-radius: 5px;
+                    overflow: hidden; /* otherwise, white pixels will appear in the corners */
+                    .wrapperInput {
+                        position:relative;
+                        &.contactField  textarea {
+                            min-height: 85px;
+                            resize: none;
+                        }
+                    }
+                    .warningMsg {
+                        color: #F7891C;
+                        position: absolute;
+                        right: 12px;
+                        top: 10px;
+                        @media only screen and (max-width: 767px) {
+                            top: 7px;
+                        }
+                    }
+
+                }
+                .conditions {
+                    margin: 10px 0;
+                    label {
+                        margin-left: 3px;
+                        font-size: 0.6em;
+                        padding-right: 15px;
+                        input {
+                            font-size: small;
+                            width: auto;
+                            margin-right: 7px;
+                            padding: 0;
+                            background-color: $pure_white;
+                        }
+                        a {
+                            color: $pure_black;
+                        }
+                    }
+
+                }
+                .hidden-parts {
+                    display: none;
+                    opacity: 0;
+                    @include transition(opacity 0.8s);
+                    h2 {
+                        font-size: 0.9em;
+                        margin: 15px 0;
+                    }
+                }
+                input {
+                    background-color: #E8EBED;
+                    border: 0;
+                    margin: 0;
+                    outline: medium none;
+                    width: 100%;
+                    @include box-sizing(border-box);
+                    padding: 12px;
+                    @media only screen and (max-width: 767px) {
+                        padding: 7px;
+                        font-size: 1.3em;
+                    }
+                    &:focus {
+                        background-color: $pure_white !important;
+                        @include transition(0.3s);
+                        outline: none;
+                        @include placeholder {
+                            color: #dee0e1;
+                        }
+                    }
+                }
+                @media only screen and (max-width: 480px) {
+                    #phoneContainer{
+                        margin-top: 8px;
+                    }
+                }
+            }
+            .main-title {
+                margin-bottom: 8px;
+            }
+            .description {
+                margin-bottom: 25px;
+                @media only screen and (max-width: 979px) {
+                    max-width: 86%;
+                }
+            }
+            .subtitle {
+                margin-bottom: 12px;
+                font-weight: 600;
+            }
+            &.endPopup {
+                text-align: center;
+                .other-content {
+                    margin-bottom: 0;
+                }
+                .main-title {
+                    margin-bottom: 20px;
+                }
+                .description {
+                    margin: 0 auto;
+                }
+                @media only screen and (max-width: 979px) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

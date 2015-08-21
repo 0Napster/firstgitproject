@@ -1,0 +1,57 @@
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+@mixin placeholder {
+  &:-ms-input-placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin animation($animations...) {
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @keyframes #{$animationName} {
+     @content;
+    }
+    @-webkit-keyframes #{$animationName} {
+     @content;
+    }
+    @-moz-keyframes #{$animationName} {
+     @content;
+    }
+    @-o-keyframes #{$animationName} {
+     @content;
+    }
+}
+
+@mixin keyframesTransform($animationToDo...) {
+    @keyframes #{nth($animationToDo, 1)} {
+       0%   { transform: nth($animationToDo, 2); }
+       100% { transform: nth($animationToDo, 3); }
+    }
+    @-webkit-keyframes  #{nth($animationToDo, 1)} {
+       0%   { -webkit-transform: nth($animationToDo, 2); }
+       100% { -webkit-transform: nth($animationToDo, 3); }
+    }
+    @-moz-keyframes  #{nth($animationToDo, 1)} {
+       0%   { -moz-transform: nth($animationToDo, 2); }
+       100% { -moz-transform: nth($animationToDo, 3); }
+    }
+     @-o-keyframes  #{nth($animationToDo, 1)} {
+       0%   { -o-transform: nth($animationToDo, 2); }
+       100% { -o-transform: nth($animationToDo, 3); }
+    }
+}

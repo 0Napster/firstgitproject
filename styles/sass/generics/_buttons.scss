@@ -1,0 +1,64 @@
+.button360 {
+    @include transition(0.3s ease);
+    @include border-radius(5px);
+    color: $pure_white;
+    border: 0;
+    &.orange {
+        background-color: $orange_button;
+        &:hover {
+            background-color: $orange_button_hover;
+        }
+    }
+    &.blue {
+        background-color: $blue_button;
+        &:hover {
+            background-color: $blue_button_hover;
+        }
+    }
+    &.red {
+        background-color: $red_button;
+        &:hover {
+            background-color: $red_button_hover;
+        }
+    }
+    &.grey {
+        background-color: #bcbcbc; /* IE 8*/
+        background-color: rgba(227,227,227, 0.6);
+        &:hover {
+            background-color: #c4C4C4;/* IE 8*/
+            background-color: rgba(227,227,227, 0.65);
+        }
+    }
+    &.white {
+        background-color: $pure_white;
+        &:hover {
+            background-color: #EEE;
+        }
+    }
+    &.iconButton {
+        position:relative;
+        &:after {
+            content:"";
+            position:absolute;
+            top:50%;
+            width:20px;
+            height:21px;
+            background-position:-72px 0;
+            margin: -10px 0;
+            right: 24px;
+            background:url(/images/global/sprite.png) no-repeat -72px 0;
+            @media only screen and (max-width: 979px) {
+                right: 9px;
+            }
+        }
+    }
+    &:hover {
+        text-decoration:none;
+        cursor: pointer;
+    }
+    &:focus {
+        outline: 0;
+    }
+}
+
+

@@ -1,0 +1,104 @@
+@import "generics/general";
+@import "generics/animation";
+@import "generics/menu";
+//@import "partials/slogan";
+//@import "partials/clients";
+//@import "partials/slick";
+//@import "partials/ourOffer";
+//@import "partials/promoSeparator";
+//@import "partials/ourReferences";
+
+.slogan {
+  background-image: url("/images/global/menu/1370x505/bandeau-32.jpg");
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='/images/global/menu/1370x505/bandeau-32.jpg', sizingMethod='scale');
+  @media only screen and (max-width: 767px) {
+    background-image: url("/images/global/menu/550x450/bandeau-32.jpg");
+  }
+  .bigTitle {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    @media only screen and (max-width: 767px) {
+      font-size: 1em;
+      line-height: 1em;
+    }
+  }
+}
+.our-offer {
+  .container {
+    h2 {
+      line-height: 1.3em;
+    }
+  }
+}
+.our-answers {
+  background-color: $pure_white;
+  .container {
+    .answers-row {
+      display: inline-block;
+      border-collapse: separate;
+      border-spacing: 40px 0;
+      @media only screen and (max-width: 979px) {
+        border-spacing: 20px 0;
+      }
+      h1 {
+        line-height: 1em;
+        font-size: 1.2em;
+        color: $pure_black;
+      }
+      h2 {
+        font-size: 0.88em;
+        color: #999999;
+      }
+      .linkContainer {
+        display: inline-block;
+        img {
+          position: absolute;
+          top: 6px;
+          right: -25px;
+          display: inline;
+          @media only screen and (max-width: 979px) {
+            top: 3px;
+          }
+          @media only screen and (max-width: 767px) {
+            top: 1px;
+          }
+        }
+        a {
+          display: inline-block;
+          text-decoration: none;
+          color: $pure_black;
+          font-weight: 600;
+          &:hover {
+            color: #2d588c;
+            cursor: pointer;
+          }
+        }
+      }
+      &.feature2 {
+        .cell {
+          text-align: left;
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        @for $i from 1 through 3 {
+          &.feature#{$i}:before {
+            background: url(/images/index/feature#{$i}.png) no-repeat;
+            height: 126px;
+            width: 210px;
+            background-size: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.promo-separator {
+  background-image: url("/images/index/bench-man.jpg");
+  @media only screen and (max-width: 767px) {
+    background-image: url("/images/index/bench-man-small.jpg");
+  }
+//  .container {
+//    padding: 3.2% 10px 4% 10px;
+//  }
+}

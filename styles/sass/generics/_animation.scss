@@ -1,0 +1,15 @@
+.button.animation {
+    text-align: center;
+    margin-top: 55px;
+    opacity: 0;
+    left: -245px;
+    position: relative;
+    &.animationTriggered {
+        @include animation(fadein 2.5s cubic-bezier(.17,.67,.24,.97) 0s 1 normal forwards);
+    }
+}
+
+@include keyframes(fadein) {
+  0%   { opacity: 0; left:-245px; }
+  100% { opacity: 1; left:0; }
+}

@@ -1,0 +1,38 @@
+RewriteEngine on
+
+#Set a local variable for the htaccess
+SetEnvIf Host "^fr\..*" REQUEST_LANG=fr
+SetEnvIf Host "^en\..*" REQUEST_LANG=en
+SetEnvIf Host "^es\..*" REQUEST_LANG=es
+
+# peroogue.fr
+
+RewriteRule ^$ index.%{ENV:REQUEST_LANG}.php [L]
+#RewriteRule ^360Compensation$ 360compensation.%{ENV:REQUEST_LANG}.php [L]
+
+# Styles images scripts
+#RewriteRule ^documents/css/(.*)$ /css/$1 [L]
+#RewriteRule ^documents/images/(.*)$ /images/$1 [L]
+#RewriteRule ^documents/js/(.*)$ /js/$1 [L]
+
+
+# Expiration (30d)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault A0
+    ExpiresByType image/jpg A2592000
+    ExpiresByType image/jpeg A2592000
+    ExpiresByType image/png A2592000
+    ExpiresByType image/gif A2592000
+    ExpiresByType image/ico A2592000
+    ExpiresByType image/icon A2592000
+    ExpiresByType image/x-icon A2592000
+    ExpiresByType text/css A2592000
+    ExpiresByType text/javascript A2592000
+    ExpiresByType text/html A2592000
+    ExpiresByType application/xhtml+xml A2592000
+    ExpiresByType application/javascript A259200
+    ExpiresByType application/x-javascript A2592000
+</IfModule>
+
+ErrorDocument 404 /404_redirect.php
