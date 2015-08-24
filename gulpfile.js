@@ -3,7 +3,7 @@ var plugins = require("gulp-load-plugins")();
 var runSequence = require("run-sequence");
 
 var jsConcatFiles = [
-    
+    'js/main.js'
 ];
 
 gulp.task("scripts:dev", function () {

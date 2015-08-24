@@ -4,7 +4,7 @@
     <?php require "templates/php/head.php"; ?>
     <script type="text/javascript" src="/js/libs/jquery.min.js"></script>
     </head>
-    <body class="lang-<?php echo getenv('REQUEST_LANG'); ?>">
+    <body class="lang-<?php echo getenv('REQUEST_LANG'); ?> gradient">
         <div id="wrapper">
             <?php
                 foreach ($sections as &$section) {
@@ -17,18 +17,19 @@
         <!-- JavaScript libraries -->
 
         <script type="text/javascript" src="/js/libs/jquery.waypoints.min.js"></script>
+        <script type="text/javascript" src="/js/libs/bootstrap.min.js"></script>
 <!--        <script type="text/javascript" src="/js/libs/TweenMax.min.js"></script>-->
         <script type="text/javascript" src="/js/libs/slick.min.js"></script>
 
         <!-- Common JavaScript code -->
 
-<!--        --><?php
-//            if (DOMAINPeroogue === "peroogue.fr") {
-//                echo "<script type='text/javascript' src='/js/min/common.min.js'></script>";
-//            } else {
-//                echo "<script type='text/javascript' src='/js/min/concat.js'></script>";
-//            }
-//        ?>
+        <?php
+            if (DOMAINPeroogue === "peroogue.fr") {
+                echo "<script type='text/javascript' src='/js/min/common.min.js'></script>";
+            } else {
+                echo "<script type='text/javascript' src='/js/min/concat.js'></script>";
+            }
+        ?>
         <!-- Specific JavaScript code -->
         <?php
             if(isset($specificScripts)) {

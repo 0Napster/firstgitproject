@@ -1,0 +1,20 @@
+.gradient {
+  &.lizard {
+    @include background(linear-gradient(90deg, #304352 10%, #d7d2cc 90%));
+  }
+  &.servQuick {
+    @include background(linear-gradient(90deg, #485563 10%, #29323c 90%));
+  }
+  &.titanium {
+    @include background(linear-gradient(90deg, #283048 10%, #859398 90%));
+  }
+  &.mirage {
+    @include background(linear-gradient(90deg, #16222A 10%, #3A6073 90%));
+  }
+  &.instagram {
+    @include background(linear-gradient(90deg, #517fa4 10%, #243949 90%));
+  }
+  &.steelgray {
+    @include background(linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%));
+  }
+}

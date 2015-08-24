@@ -34,11 +34,15 @@ switch (getenv('REQUEST_LANG')) {
       content="<?php echo 'http://fr.' . DOMAINPeroogue . '/images/global/social/' . $social . '.jpg'; ?>">
 <meta property="og:description" content="<?php echo $head_description; ?>">
 <link rel="image_src" href="<?php echo 'http://fr.' . DOMAINPeroogue . '/images/global/social/' . $social . '.jpg'; ?>">
-<meta itemprop="image" content="<?php echo 'http://fr.' . DOMAINPeroogue . '/images/global/social/' . $social . '.jpg'; ?>">
+<meta itemprop="image"
+      content="<?php echo 'http://fr.' . DOMAINPeroogue . '/images/global/social/' . $social . '.jpg'; ?>">
 <title><?php echo $head_title; ?></title>
 <link rel="icon" href="/images/favicon.png?v=3">
+<link media="all" rel="stylesheet" type="text/css" href="/styles/libs/bootstrap.min.css"/>
+<link media="all" rel="stylesheet" type="text/css" href="/styles/libs/bootstrap-theme.css"/>
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo '/styles/css/' . $page . '.css' . "?v=4"; ?>"/>
-<link media="all" rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600,800"/>
+<link media="all" rel="stylesheet" type="text/css"
+      href="//fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600,800"/>
 <script type="text/javascript" src="/js/libs/modernizr.custom.js"></script>
 <script type="text/javascript">
     var rules = document.createElement("div").style;
