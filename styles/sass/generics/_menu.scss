@@ -1,6 +1,26 @@
 #header {
-  background-color: white;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  background-color: $pure_white;
   height: 80px;
+  @include transition(top 0.2s);
+  @include opacity(0);
+  &.showBar {
+    top: 0;
+  }
+  &.hideBar {
+    top: -106px;
+  }
+  .loader-anim {
+    width: 0;
+    height: 3px;
+    @media only screen and (max-width: 979px) {
+      display: none;
+    }
+  }
   .navbar-nav {
     li {
       a {

@@ -1,4 +1,4 @@
-<header id="header" class="showBar">
+<header id="header" class="showBar animated">
     <div class="loader-anim"></div>
     <div class="container">
         <div id="navbar" class="collapse navbar-collapse">

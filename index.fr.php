@@ -10,7 +10,7 @@ $url = "";
 $social= "social11";
 $sections = array(
     "menu",
-//    "hello"
+    "section-hello"
 );
 $specificScripts = array(
     array(
@@ -28,7 +28,7 @@ $head_description = "Portfolio v2";
 // Menu
 
 // Hello
-
+$hello_title = "content";
 
 // Section Client
 

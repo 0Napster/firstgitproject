@@ -1,0 +1,296 @@
+/* Animated Diagram */
+
+.animatedDiagram {
+  background-color: #FAFAFA;
+  padding: 70px 0;
+  .container {
+    h1 {
+      font-size: 1.5em;
+      text-align: center;
+      color: #CCCCCC;
+      line-height: 1.2em;
+      margin: 0;
+      span {
+        color: #F39C12;
+      }
+      @media only screen and (max-width: 979px) {
+        font-size: 2em;
+      }
+      @media only screen and (max-width: 767px) {
+        font-size: 2.6em;
+      }
+    }
+    .diagram {
+      width: 80%;
+      margin: -126px auto;
+      height: 1050px;
+      @media only screen and (max-width: 979px) {
+        width: 300px;
+        margin: 0 auto;
+        height: 900px;
+      }
+      .circle {
+        width: 90px;
+        height: 90px;
+        border-radius: 80px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 2;
+        @include transition(ease 1.3s);
+        @media only screen and (max-width: 979px) {
+          margin: 240px auto;
+          @include transition(none);
+        }
+        .text {
+          width: 216px;
+          position: relative;
+          top: 116px;
+          left: -58px;
+          @include opacity(0);
+          @include transition(ease 300ms);
+          @media only screen and (max-width: 979px) {
+            @include opacity(1);
+          }
+          &.visible {
+            @include opacity(1);
+          }
+          h1 {
+            font-size: 0.8em;
+            font-weight: 600;
+            color: #333333;
+            @media only screen and (max-width: 979px) {
+              font-size: 1.2em;
+            }
+            @media only screen and (max-width: 767px) {
+              font-size: 1.5em;
+            }
+          }
+          p {
+            font-size: 0.7em;
+            color: #CCCCCC;
+            text-align: center;
+            @media only screen and (max-width: 979px) {
+              font-size: 1.3em;
+              line-height: 1.3em;
+            }
+            @media only screen and (max-width: 767px) {
+              font-size: 1.6em;
+            }
+          }
+          .button360 {
+            text-align: center;
+            width: 80%;
+            height: 30px;
+            background-color: transparent;
+            margin: 0 auto;
+            font-size: 0.70em;
+            line-height: 30px;
+            @include opacity(0);
+            &:hover {
+              color: $pure_white !important;
+            }
+          }
+        }
+      }
+      .blue {
+        position: relative;
+        z-index: 5;
+        top: 301px;
+        left: 335px;
+        width: 120px;
+        height: 120px;
+        background-color: #2B3E51;
+        background-image: url("/images/global/diagram/logo-360-little.png");
+        @media only screen and (max-width: 979px) {
+          display: none;
+        }
+        &.animated {
+          @include animation(pulse 1s ease);
+        }
+      }
+      .pulse {
+        position: relative;
+        z-index: 5;
+        top: 422px;
+        left: 335px;
+        height: 120px;
+        width: 120px;
+        background-color: #dfdfdf;
+        box-shadow: 0 0 0 0 rgba(223, 223, 223, 1);
+        border-radius: 50%;
+        will-change: transform;
+        @include transition(ease 1.3s);
+        &.animated {
+          @include animation(pulseBig 1.8s ease .36s);
+        }
+        @media only screen and (max-width: 979px) {
+          display: none;
+        }
+      }
+      .yellow {
+        position: relative;
+        top: 190px;
+        left: 351px;
+        background-color: #FDD464;
+        background-image: url("/images/global/diagram/picto-yellow.png");
+        @include transform(scale(0.4));
+        @include opacity(0);
+        &:hover {
+          .text {
+            .button360 {
+              color: #FDD464;
+              border: 1px solid #FDD464;
+              @include opacity(1);
+              &:hover {
+                @include box-shadow(inset 0 0 0 40px #FDD464);
+              }
+            }
+          }
+        }
+        @media only screen and (max-width: 979px) {
+          position: static;
+          left: 0;
+          top: 0;
+          @include transform(translate(0, 0) scale(1));
+          @include opacity(1);
+          margin: 85px auto;
+        }
+        &.animated {
+          @include transform(translate(-327px, -145px) scale(1));
+          @include opacity(1);
+          @media only screen and (max-width: 979px) {
+            position: static;
+            left: 0;
+            top: 0;
+            margin: 85px auto;
+            @include transform(translate(0, 0) scale(1));
+            @include opacity(1);
+          }
+        }
+      }
+      .lightblue {
+        position: relative;
+        top: 100px;
+        left: 351px;
+        background-color: #70C5DE;
+        background-image: url("/images/global/diagram/picto-lightblue.png");
+        @include transform(scale(0.4));
+        @include opacity(0);
+        &:hover {
+          .text {
+            .button360 {
+              color: #70C5DE;
+              border: 1px solid #70C5DE;
+              @include opacity(1);
+              &:hover {
+                @include box-shadow(inset 0 0 0 40px #70C5DE);
+              }
+            }
+          }
+        }
+        @media only screen and (max-width: 979px) {
+          position: static;
+          left: 0;
+          top: 0;
+          @include transform(translate(0, 0) scale(1));
+          @include opacity(1);
+        }
+        &.animated {
+          @include transform(translate(321px, -144px) scale(1));
+          @include opacity(1);
+          @media only screen and (max-width: 979px) {
+            position: static;
+            left: 0;
+            top: 0;
+            @include transform(translate(0, 0) scale(1));
+            @include opacity(1);
+          }
+        }
+      }
+      .green {
+        position: relative;
+        top: 10px;
+        left: 351px;
+        background-color: #70DEBD;
+        background-image: url("/images/global/diagram/picto-green.png");
+        @include transform(scale(0.4));
+        @include opacity(0);
+        &:hover {
+          .text {
+            .button360 {
+              color: #70DEBD;
+              border: 1px solid #70DEBD;
+              @include opacity(1);
+              &:hover {
+                @include box-shadow(inset 0 0 0 40px #70DEBD);
+              }
+            }
+          }
+        }
+        @media only screen and (max-width: 979px) {
+          position: static;
+          left: 0;
+          top: 0;
+          @include transform(translate(0, 0) scale(1));
+          @include opacity(1);
+        }
+        &.animated {
+          @include transform(translate(-4px, 270px) scale(1));
+          @include opacity(1);
+          @media only screen and (max-width: 979px) {
+            position: static;
+            left: 0;
+            top: 0;
+            @include transform(translate(0, 0) scale(1));
+            @include opacity(1);
+          }
+        }
+      }
+      .diagram-background {
+        content: "";
+        background-image: url("/images/global/diagram/diagram-background.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 800px;
+        top: -390px;
+        display: block;
+        position: relative;
+        @include transition(ease 1.5s);
+        @include opacity(0);
+        @include transform(scale(0));
+        @media only screen and (max-width: 979px) {
+          display: none;
+        }
+        &.visible {
+          @include opacity(1);
+          @include transform(scale(1));
+        }
+      }
+    }
+  }
+  @-webkit-keyframes pulseBig {
+    to {
+      box-shadow: 0 0 0 455px rgba(232, 76, 61, 0);
+    }
+  }
+  @-moz-keyframes pulseBig {
+    to {
+      box-shadow: 0 0 0 455px rgba(232, 76, 61, 0);
+    }
+  }
+  @-ms-keyframes pulseBig {
+    to {
+      box-shadow: 0 0 0 455px rgba(232, 76, 61, 0);
+    }
+  }
+  @keyframes pulseBig {
+    to {
+      box-shadow: 0 0 0 455px rgba(232, 76, 61, 0);
+    }
+  }
+}
+
+
+
+
+

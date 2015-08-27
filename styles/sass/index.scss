@@ -2,7 +2,7 @@
 @import "generics/animation";
 @import "generics/menu";
 @import "generics/gradient";
-//@import "partials/slogan";
+@import "partials/hello";
 //@import "partials/clients";
 //@import "partials/slick";
 //@import "partials/ourOffer";
@@ -99,7 +99,9 @@
   @media only screen and (max-width: 767px) {
     background-image: url("/images/index/bench-man-small.jpg");
   }
-//  .container {
-//    padding: 3.2% 10px 4% 10px;
-//  }
 }
+
+
+
+
+

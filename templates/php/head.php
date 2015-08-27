@@ -40,6 +40,7 @@ switch (getenv('REQUEST_LANG')) {
 <link rel="icon" href="/images/favicon.png?v=3">
 <link media="all" rel="stylesheet" type="text/css" href="/styles/libs/bootstrap.min.css"/>
 <link media="all" rel="stylesheet" type="text/css" href="/styles/libs/bootstrap-theme.css"/>
+<link media="all" rel="stylesheet" type="text/css" href="/styles/libs/animate.min.css"/>
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo '/styles/css/' . $page . '.css' . "?v=4"; ?>"/>
 <link media="all" rel="stylesheet" type="text/css"
       href="//fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,300,600,800"/>
