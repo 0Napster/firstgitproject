@@ -1,16 +1,17 @@
 <?php
 
 /**
-* The datas for this specific page
-*/
+ * The datas for this specific page
+ */
 
 // Global
 $page = "index";
 $url = "";
-$social= "social11";
+$social = "";
 $sections = array(
     "menu",
-    "section-hello"
+    "section-hello",
+    "section-gallery"
 );
 $specificScripts = array(
     array(
@@ -28,19 +29,20 @@ $head_description = "Portfolio v2";
 // Menu
 
 // Hello
-$hello_title = "content";
+$hello_title = "Welcome !";
+
+// Gallery
+$gallery_title = "Mes Créations";
 
 // Section Client
 
-$realisations = array(
-
-);
+$realisations = array();
 
 ?>
 
 <?php
-    /**
-    * Main template
-    */
-    require "templates/php/mainstructure.php";
+/**
+ * Main template
+ */
+require "templates/php/mainstructure.php";
 ?>

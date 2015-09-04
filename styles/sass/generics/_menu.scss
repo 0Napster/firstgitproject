@@ -8,12 +8,6 @@
   height: 80px;
   @include transition(top 0.2s);
   @include opacity(0);
-  &.showBar {
-    top: 0;
-  }
-  &.hideBar {
-    top: -106px;
-  }
   .loader-anim {
     width: 0;
     height: 3px;
@@ -25,6 +19,116 @@
     li {
       a {
         line-height: 50px;
+      }
+    }
+  }
+}
+
+.circular-button {
+  border: none;
+  color: $pure_black;
+  text-align: center;
+  font-size: 1.8em;
+  padding-top: 1em;
+  height: 3.5em;
+  width: 3.5em;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  margin-left: -1.75em;
+  top: -1.65em;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  z-index: 11;
+  @include opacity(0);
+}
+
+.circular-menu {
+  font-size: 1em;
+  width: 26em;
+  height: 26em;
+  position: fixed;
+  z-index: 10;
+  top: -26em;
+  left: 50%;
+  border-radius: 50%;
+  margin-left: -13em;
+  pointer-events: none;
+  @include transform(scale(0.1));
+  @include transition(all .3s ease);
+  &.visible {
+    @include transform(scale(1));
+    border-radius: 50%;
+    pointer-events: auto;
+  }
+  li {
+    position: absolute;
+    font-size: 1.5em;
+    width: 10em;
+    height: 10em;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    margin-top: -1.3em;
+    margin-left: -10em;
+    @include transform-origin(100%, 100%);
+    @include transition(border .3s ease);
+    &:first-child {
+      @include transform(rotate(-110deg) skew(50deg));
+    }
+    &:nth-child(2) {
+      @include transform(rotate(-70deg) skew(50deg));
+    }
+    &:nth-child(3) {
+      @include transform(rotate(-189deg) skew(50deg));
+    }
+    &:nth-child(4) {
+      @include transform(rotate(-150deg) skew(50deg));
+    }
+    &:nth-child(5) {
+      @include transform(rotate(-30deg) skew(50deg));
+    }
+    &:nth-child(even) {
+      a {
+        background-color: #a61414;
+        background-color: hsla(0, 88%, 65%, 1);
+      }
+    }
+    &:nth-child(odd) {
+      a {
+        background-color: #a11313;
+        background-color: hsla(0, 88%, 63%, 1);
+      }
+    }
+    a {
+      display: block;
+      cursor: pointer;
+      font-size: 1.18em;
+      height: 14.5em;
+      width: 14.5em;
+      position: absolute;
+      bottom: -7.25em;
+      right: -7.25em;
+      border-radius: 50%;
+      text-decoration: none;
+      color: #fff;
+      padding-top: 1.8em;
+      text-align: center;
+      @include transform(skew(-50deg) rotate(-70deg) scale(1));
+      @include transition(opacity 0.3s, color 0.3s);
+      -webkit-backface-visibility: hidden;
+      &.active {
+        background-color: #b31515;
+        background-color: hsla(0, 88%, 70%, 1);
+      }
+    }
+    &:not(.active) {
+      a {
+        &:hover, :active, :focus {
+          background-color: #b31515;
+          background-color: hsla(0, 88%, 70%, 1);
+        }
       }
     }
   }

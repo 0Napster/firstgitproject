@@ -5,6 +5,8 @@ SetEnvIf Host "^fr\..*" REQUEST_LANG=fr
 SetEnvIf Host "^en\..*" REQUEST_LANG=en
 SetEnvIf Host "^es\..*" REQUEST_LANG=es
 
+
+
 # peroogue.fr
 
 RewriteRule ^$ index.%{ENV:REQUEST_LANG}.php [L]

@@ -17,26 +17,7 @@ body {
   -ms-text-size-adjust: none;
 }
 
-/* line 28, ../sass/generics/_general.scss */
-img {
-  border-style: none;
-}
-
-/* line 32, ../sass/generics/_general.scss */
-a {
-  text-decoration: none;
-  color: #2D588C;
-}
-/* line 35, ../sass/generics/_general.scss */
-a:hover {
-  text-decoration: underline;
-}
-/* line 38, ../sass/generics/_general.scss */
-a:active {
-  background-color: transparent;
-}
-
-/* line 43, ../sass/generics/_general.scss */
+/* line 39, ../sass/generics/_general.scss */
 input, textarea {
   font: 100% 'Open Sans', sans-serif;
   vertical-align: middle;
@@ -44,88 +25,22 @@ input, textarea {
   outline: none;
 }
 
-/* line 50, ../sass/generics/_general.scss */
+/* line 46, ../sass/generics/_general.scss */
 textarea {
   -webkit-appearance: none;
   border-radius: 0;
 }
 
-/* line 56, ../sass/generics/_general.scss */
+/* line 52, ../sass/generics/_general.scss */
 form {
   margin: 0;
   padding: 0;
   border-style: none;
 }
 
-/* line 62, ../sass/generics/_general.scss */
+/* line 58, ../sass/generics/_general.scss */
 input[type="button"]:focus, textarea[type="button"]:focus {
   outline: none;
-}
-
-/* line 66, ../sass/generics/_general.scss */
-.button360 {
-  background-image: none;
-}
-
-/* line 70, ../sass/generics/_general.scss */
-.clear-after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-/* line 76, ../sass/generics/_general.scss */
-.placeholder {
-  color: #AAAAAA !important;
-}
-
-/* line 80, ../sass/generics/_general.scss */
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-  min-width: 300px;
-}
-
-/* line 86, ../sass/generics/_general.scss */
-.alignleft {
-  float: left;
-}
-
-/* line 90, ../sass/generics/_general.scss */
-.alignright {
-  float: right;
-}
-
-/* line 94, ../sass/generics/_general.scss */
-.aligncenter {
-  text-align: center !important;
-}
-
-/* line 98, ../sass/generics/_general.scss */
-.textAlignLeft {
-  text-align: left;
-}
-
-/* line 102, ../sass/generics/_general.scss */
-.textAlignRight {
-  text-align: left;
-}
-
-/* line 106, ../sass/generics/_general.scss */
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-
-/* line 112, ../sass/generics/_general.scss */
-.clearfix:after {
-  clear: both;
-}
-
-/* line 116, ../sass/generics/_general.scss */
-.clearfix {
-  zoom: 1;
 }
 
 /* line 1, ../sass/generics/_ie.scss */
@@ -352,7 +267,7 @@ body.ie {
   width: 175px;
 }
 
-/* line 126, ../sass/generics/_general.scss */
+/* line 69, ../sass/generics/_general.scss */
 #wrapper {
   width: 100%;
   position: relative;
@@ -420,27 +335,172 @@ body.ie {
   opacity: 0;
 }
 /* line 11, ../sass/generics/_menu.scss */
-#header.showBar {
-  top: 0;
-}
-/* line 14, ../sass/generics/_menu.scss */
-#header.hideBar {
-  top: -106px;
-}
-/* line 17, ../sass/generics/_menu.scss */
 #header .loader-anim {
   width: 0;
   height: 3px;
 }
 @media only screen and (max-width: 979px) {
-  /* line 17, ../sass/generics/_menu.scss */
+  /* line 11, ../sass/generics/_menu.scss */
   #header .loader-anim {
     display: none;
   }
 }
-/* line 26, ../sass/generics/_menu.scss */
+/* line 20, ../sass/generics/_menu.scss */
 #header .navbar-nav li a {
   line-height: 50px;
+}
+
+/* line 27, ../sass/generics/_menu.scss */
+.circular-button {
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 1.8em;
+  padding-top: 1em;
+  height: 3.5em;
+  width: 3.5em;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  margin-left: -1.75em;
+  top: -1.65em;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  z-index: 11;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 47, ../sass/generics/_menu.scss */
+.circular-menu {
+  font-size: 1em;
+  width: 26em;
+  height: 26em;
+  position: fixed;
+  z-index: 10;
+  top: -26em;
+  left: 50%;
+  border-radius: 50%;
+  margin-left: -13em;
+  pointer-events: none;
+  -moz-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 60, ../sass/generics/_menu.scss */
+.circular-menu.visible {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  border-radius: 50%;
+  pointer-events: auto;
+}
+/* line 65, ../sass/generics/_menu.scss */
+.circular-menu li {
+  position: absolute;
+  font-size: 1.5em;
+  width: 10em;
+  height: 10em;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  margin-top: -1.3em;
+  margin-left: -10em;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -moz-transition: border 0.3s ease;
+  -o-transition: border 0.3s ease;
+  -webkit-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+}
+/* line 77, ../sass/generics/_menu.scss */
+.circular-menu li:first-child {
+  -moz-transform: rotate(-110deg) skew(50deg);
+  -ms-transform: rotate(-110deg) skew(50deg);
+  -webkit-transform: rotate(-110deg) skew(50deg);
+  transform: rotate(-110deg) skew(50deg);
+}
+/* line 80, ../sass/generics/_menu.scss */
+.circular-menu li:nth-child(2) {
+  -moz-transform: rotate(-70deg) skew(50deg);
+  -ms-transform: rotate(-70deg) skew(50deg);
+  -webkit-transform: rotate(-70deg) skew(50deg);
+  transform: rotate(-70deg) skew(50deg);
+}
+/* line 83, ../sass/generics/_menu.scss */
+.circular-menu li:nth-child(3) {
+  -moz-transform: rotate(-189deg) skew(50deg);
+  -ms-transform: rotate(-189deg) skew(50deg);
+  -webkit-transform: rotate(-189deg) skew(50deg);
+  transform: rotate(-189deg) skew(50deg);
+}
+/* line 86, ../sass/generics/_menu.scss */
+.circular-menu li:nth-child(4) {
+  -moz-transform: rotate(-150deg) skew(50deg);
+  -ms-transform: rotate(-150deg) skew(50deg);
+  -webkit-transform: rotate(-150deg) skew(50deg);
+  transform: rotate(-150deg) skew(50deg);
+}
+/* line 89, ../sass/generics/_menu.scss */
+.circular-menu li:nth-child(5) {
+  -moz-transform: rotate(-30deg) skew(50deg);
+  -ms-transform: rotate(-30deg) skew(50deg);
+  -webkit-transform: rotate(-30deg) skew(50deg);
+  transform: rotate(-30deg) skew(50deg);
+}
+/* line 93, ../sass/generics/_menu.scss */
+.circular-menu li:nth-child(even) a {
+  background-color: #a61414;
+  background-color: #f45757;
+}
+/* line 99, ../sass/generics/_menu.scss */
+.circular-menu li:nth-child(odd) a {
+  background-color: #a11313;
+  background-color: #f44e4e;
+}
+/* line 104, ../sass/generics/_menu.scss */
+.circular-menu li a {
+  display: block;
+  cursor: pointer;
+  font-size: 1.18em;
+  height: 14.5em;
+  width: 14.5em;
+  position: absolute;
+  bottom: -7.25em;
+  right: -7.25em;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  padding-top: 1.8em;
+  text-align: center;
+  -moz-transform: skew(-50deg) rotate(-70deg) scale(1);
+  -ms-transform: skew(-50deg) rotate(-70deg) scale(1);
+  -webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
+  transform: skew(-50deg) rotate(-70deg) scale(1);
+  -moz-transition: opacity 0.3s, color 0.3s;
+  -o-transition: opacity 0.3s, color 0.3s;
+  -webkit-transition: opacity 0.3s, color 0.3s;
+  transition: opacity 0.3s, color 0.3s;
+  -webkit-backface-visibility: hidden;
+}
+/* line 121, ../sass/generics/_menu.scss */
+.circular-menu li a.active {
+  background-color: #b31515;
+  background-color: #f66f6f;
+}
+/* line 128, ../sass/generics/_menu.scss */
+.circular-menu li:not(.active) a:hover, .circular-menu li:not(.active) a :active, .circular-menu li:not(.active) a :focus {
+  background-color: #b31515;
+  background-color: #f66f6f;
 }
 
 /* line 2, ../sass/generics/_gradient.scss */
@@ -490,38 +550,35 @@ body.ie {
 /* line 3, ../sass/partials/_hello.scss */
 .hello {
   background-color: #FFFFFF;
-  padding: 70px 0;
-  height: 400px;
   width: 100%;
-  margin: 650px auto;
-  border-radius: 5px;
+  margin: 650px auto 0;
   z-index: 0;
+  height: 600px;
 }
-/* line 12, ../sass/partials/_hello.scss */
+/* line 10, ../sass/partials/_hello.scss */
 .hello .container .father-circle {
   border: 100px solid #FFFFFF;
   border-radius: 50%;
-  width: 900px;
+  width: 940px;
   height: 900px;
   position: relative;
-  top: -650px;
+  top: -600px;
   z-index: -1;
   margin: 0 auto;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
-  -moz-box-shadow: 0 0 1px 0px white;
-  -webkit-box-shadow: 0 0 1px 0px white;
-  box-shadow: 0 0 1px 0px white;
-  -moz-transition: ease-in-out 3s;
-  -o-transition: ease-in-out 3s;
-  -webkit-transition: ease-in-out 3s;
-  transition: ease-in-out 3s;
 }
-/* line 24, ../sass/partials/_hello.scss */
+@media only screen and (max-width: 1200px) {
+  /* line 10, ../sass/partials/_hello.scss */
+  .hello .container .father-circle {
+    display: none;
+  }
+}
+/* line 23, ../sass/partials/_hello.scss */
 .hello .container .father-circle.animated {
   animation-duration: 3s;
 }
-/* line 30, ../sass/partials/_hello.scss */
+/* line 29, ../sass/partials/_hello.scss */
 .hello .container .father-circle .childrens-circles {
   width: 90px;
   height: 90px;
@@ -532,132 +589,41 @@ body.ie {
   left: -95px;
 }
 
-/* line 12, ../sass/index.scss */
-.slogan {
-  background-image: url("/images/global/menu/1370x505/bandeau-32.jpg");
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='/images/global/menu/1370x505/bandeau-32.jpg', sizingMethod='scale');
-}
-@media only screen and (max-width: 767px) {
-  /* line 12, ../sass/index.scss */
-  .slogan {
-    background-image: url("/images/global/menu/550x450/bandeau-32.jpg");
-  }
-}
-/* line 18, ../sass/index.scss */
-.slogan .bigTitle {
-  font-size: 1.3em;
-  line-height: 1.3em;
-}
-@media only screen and (max-width: 767px) {
-  /* line 18, ../sass/index.scss */
-  .slogan .bigTitle {
-    font-size: 1em;
-    line-height: 1em;
-  }
-}
-
-/* line 29, ../sass/index.scss */
-.our-offer .container h2 {
-  line-height: 1.3em;
-}
-
-/* line 34, ../sass/index.scss */
-.our-answers {
+/* Gallery */
+/* line 3, ../sass/partials/_gallery.scss */
+.gallery {
   background-color: #FFFFFF;
+  padding: 70px 0;
+  width: 100%;
+  margin: 250px auto 0;
+  z-index: 0;
 }
-/* line 37, ../sass/index.scss */
-.our-answers .container .answers-row {
-  display: inline-block;
-  border-collapse: separate;
-  border-spacing: 40px 0;
+/* line 10, ../sass/partials/_gallery.scss */
+.gallery .container .row {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
 }
-@media only screen and (max-width: 979px) {
-  /* line 37, ../sass/index.scss */
-  .our-answers .container .answers-row {
-    border-spacing: 20px 0;
-  }
+/* line 12, ../sass/partials/_gallery.scss */
+.gallery .container .row .release {
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  background: #f2f2f2;
+  border: 1px solid black;
 }
-/* line 44, ../sass/index.scss */
-.our-answers .container .answers-row h1 {
-  line-height: 1em;
-  font-size: 1.2em;
-  color: #000000;
+/* line 19, ../sass/partials/_gallery.scss */
+.gallery .container .row .release img {
+  width: 100%;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
 }
-/* line 49, ../sass/index.scss */
-.our-answers .container .answers-row h2 {
-  font-size: 0.88em;
-  color: #999999;
-}
-/* line 53, ../sass/index.scss */
-.our-answers .container .answers-row .linkContainer {
-  display: inline-block;
-}
-/* line 55, ../sass/index.scss */
-.our-answers .container .answers-row .linkContainer img {
-  position: absolute;
-  top: 6px;
-  right: -25px;
-  display: inline;
-}
-@media only screen and (max-width: 979px) {
-  /* line 55, ../sass/index.scss */
-  .our-answers .container .answers-row .linkContainer img {
-    top: 3px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  /* line 55, ../sass/index.scss */
-  .our-answers .container .answers-row .linkContainer img {
-    top: 1px;
-  }
-}
-/* line 67, ../sass/index.scss */
-.our-answers .container .answers-row .linkContainer a {
-  display: inline-block;
-  text-decoration: none;
-  color: #000000;
-  font-weight: 600;
-}
-/* line 72, ../sass/index.scss */
-.our-answers .container .answers-row .linkContainer a:hover {
-  color: #2d588c;
-  cursor: pointer;
-}
-/* line 79, ../sass/index.scss */
-.our-answers .container .answers-row.feature2 .cell {
-  text-align: left;
-}
-@media only screen and (max-width: 767px) {
-  /* line 85, ../sass/index.scss */
-  .our-answers .container .answers-row.feature1:before {
-    background: url(/images/index/feature1.png) no-repeat;
-    height: 126px;
-    width: 210px;
-    background-size: 100%;
-  }
-  /* line 85, ../sass/index.scss */
-  .our-answers .container .answers-row.feature2:before {
-    background: url(/images/index/feature2.png) no-repeat;
-    height: 126px;
-    width: 210px;
-    background-size: 100%;
-  }
-  /* line 85, ../sass/index.scss */
-  .our-answers .container .answers-row.feature3:before {
-    background: url(/images/index/feature3.png) no-repeat;
-    height: 126px;
-    width: 210px;
-    background-size: 100%;
-  }
-}
-
-/* line 97, ../sass/index.scss */
-.promo-separator {
-  background-image: url("/images/index/bench-man.jpg");
-}
-@media only screen and (max-width: 767px) {
-  /* line 97, ../sass/index.scss */
-  .promo-separator {
-    background-image: url("/images/index/bench-man-small.jpg");
-  }
+/* line 23, ../sass/partials/_gallery.scss */
+.gallery .container .row .release img:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
 }

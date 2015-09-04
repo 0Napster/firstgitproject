@@ -19,7 +19,7 @@
 
 <script type="text/javascript" src="/js/libs/jquery.waypoints.min.js"></script>
 <script type="text/javascript" src="/js/libs/bootstrap.min.js"></script>
-<!--        <script type="text/javascript" src="/js/libs/TweenMax.min.js"></script>-->
+<script type="text/javascript" src="/js/libs/TweenMax.min.js"></script>
 <script type="text/javascript" src="/js/libs/slick.min.js"></script>
 
 <!-- Common JavaScript code -->

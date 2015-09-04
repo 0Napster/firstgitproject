@@ -2,25 +2,24 @@
 
 .hello {
   background-color: $pure_white;
-  padding: 70px 0;
-  height: 400px;
   width: 100%;
-  margin: 650px auto;
-  border-radius: 5px;
+  margin: 650px auto 0;
   z-index: 0;
+  height: 600px;
   .container {
     .father-circle {
       border: 100px solid $pure_white;
       border-radius: 50%;
-      width: 900px;
+      width: 940px;
       height: 900px;
       position: relative;
-      top: -650px;
+      top: -600px;
       z-index: -1;
       margin: 0 auto;
       @include opacity(0.6);
-      @include box-shadow(0 0 1px 0px rgb(255, 255, 255));
-      @include transition(3s ease-in-out);
+      @media only screen and (max-width: 1200px) {
+        display: none;
+      }
       &.animated {
         animation-duration: 3s;
       }
@@ -38,5 +37,4 @@
       }
     }
   }
-
 }
